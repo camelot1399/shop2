@@ -135,7 +135,7 @@ p {
 }
 .brand__left {
   background: rgba(113, 103, 105, 0.08);
-  display: flex;
+  display: none;
   flex: 1;
   align-items: center;
   justify-content: center;
@@ -148,6 +148,7 @@ p {
   display: flex;
   flex: 1;
   align-items: center;
+  height: 100vh;
 }
 .brand__right_text {
   margin-left: 40px;
@@ -160,6 +161,10 @@ p {
   .user {
     display: block;
   }
+
+  .brand__left {
+    display: flex;
+  }
 }
 @media screen and (min-width: 768px) {
   .wrapper {
@@ -170,5 +175,9 @@ p {
   .user, .basket {
     display: block;
     cursor: pointer;
+  }
+
+  .brand__left {
+    display: flex;
   }
 }/*# sourceMappingURL=style.css.map */
