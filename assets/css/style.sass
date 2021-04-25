@@ -46,7 +46,6 @@ p
 .wrapper
   padding-left: 16px
   padding-right: 16px
-  background: $bg3
 .btn
   border: 1px solid $color4
   color: $color4
@@ -74,6 +73,7 @@ p
   font-size: 18px
   color: $color7
   font-size: 27px
+  background: $color3
   &__left
     display: flex
     align-items: center
@@ -132,14 +132,51 @@ p
       padding-left: 10px
       text-transform: uppercase
 
-@media screen and (min-width: 376px) and (max-width: 768px)
+.offers
+  display: flex
+  flex-direction: column
+  &__a
+    width: 100%
+  &__img
+    width: 100%
+  &__block1
+    &_item
+      margin-top: 20px
+  &__block2
+    &_item
+      margin-top: 20px
+
+    
+@media screen and (min-width: 376px) and (max-width: 769px)
   .user
     display: block
   .brand
     &__left
       display: flex
+  .offers
+    display: flex
+    flex-direction: column
+    &__a
+      width: 100%
+    &__img
+      width: 100%
+    &__block1
+      display: flex
+      flex: 1
+      &_item
+        margin-top: 20px
+      &_item:not(:first-child)
+        margin-left: 10px
+        
+    &__block2
+      display: flex
+      flex: 1
+      &_item
+        margin-top: 20px
+        display: flex
+        flex: 1
   
-@media screen and (min-width: 768px)
+@media screen and (min-width: 769px)
   .wrapper
     padding-left: 230px
     padding-right: 230px
@@ -149,3 +186,25 @@ p
   .brand
     &__left
       display: flex
+  .offers
+    display: flex
+    flex-direction: column
+    &__a
+      width: 100%
+    &__img
+      width: 100%
+    &__block1
+      display: flex
+      flex: 1
+      &_item
+        margin-top: 20px
+      &_item:not(:first-child)
+        margin-left: 10px
+        
+    &__block2
+      display: flex
+      flex: 1
+      &_item
+        margin-top: 20px
+        display: flex
+        flex: 1
