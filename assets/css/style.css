@@ -1,4 +1,124 @@
 * {
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 58px;
+  color: #222222;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 36px;
+  color: #222222;
+}
+
+h3 {
+  font-size: 13px;
+  line-height: 16px;
+}
+
+p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #5D5D5D;
+}
+
+.wrapper {
+  padding-left: 16px;
+  padding-right: 16px;
+  background: #222222;
+}
+
+.btn {
+  border: 1px solid #FF6A6A;
+  color: #FF6A6A;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.6s;
+}
+
+.btn__allProduct {
+  max-width: 212px;
+}
+
+.btn__allProduct:hover {
+  background: #F16D7F;
+  color: #fff;
+}
+
+.btn__allProduct::before {
+  content: "Browse All Product";
+  max-width: 212px;
+}
+
+.btn__subscribe::before {
+  content: "Subscribe";
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 18px;
+  color: #E8E8E8;
+  font-size: 27px;
+}
+.header__left {
+  display: flex;
+  align-items: center;
+}
+.header__right {
+  display: flex;
+  align-items: center;
+}
+.header__right > div:not(:first-child) {
+  margin-left: 20px;
+}
+
+.logo {
+  width: 44px;
+}
+
+.search {
+  margin-left: 40px;
+  cursor: pointer;
+}
+
+.user, .basket {
+  display: none;
+}
+
+.menu {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 376px) and (max-width: 768px) {
+  .user {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding-left: 230px;
+    padding-right: 230px;
+  }
+
+  .user, .basket {
+    display: block;
+    cursor: pointer;
+  }
 }/*# sourceMappingURL=style.css.map */

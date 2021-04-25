@@ -1,3 +1,105 @@
 *
   padding: 0
   margin: 0
+
+$bg1: #F1E4E6 // pink
+$bg2: rgba(113, 103, 105, 0.08)
+$bg3: #222222 //black
+$bg4: #F8F8F8 // gray
+$bg5: #F16D7F // pink
+
+$color1: #F16D7F //pink
+$color2: #5D5D5D //gray
+$color3: #000000 //black
+$color7: #E8E8E8 //gray
+
+//btn
+$color4: #FF6A6A //btn co
+$color5: #F26376 // btn color
+$color6: #fff
+
+body
+  font-family: Lato
+  font-style: normal
+  font-weight: normal
+
+h1
+  font-weight: 900
+  font-size: 48px
+  line-height: 58px
+  color: $bg3
+h2
+  font-size: 30px
+  line-height: 36px
+  color: $bg3
+h3
+  font-size: 13px
+  line-height: 16px
+
+p
+  font-weight: 300
+  font-size: 14px
+  line-height: 17px
+  color: $color2
+
+.wrapper
+  padding-left: 16px
+  padding-right: 16px
+  background: $bg3
+.btn
+  border: 1px solid $color4
+  color: $color4
+  padding: 15px 40px
+  text-align: center
+  text-decoration: none
+  transition: background 0.6s
+.btn__allProduct
+  max-width: 212px
+.btn__allProduct:hover
+  background: $bg5
+  color: $color6
+.btn__allProduct::before
+  content: 'Browse All Product'
+  max-width: 212px
+.btn__subscribe::before
+  content: 'Subscribe'
+
+.header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 18px
+  padding-bottom: 18px
+  font-size: 18px
+  color: $color7
+  font-size: 27px
+  &__left
+    display: flex
+    align-items: center
+  &__right
+    display: flex
+    align-items: center
+    & > div:not(:first-child)
+      margin-left: 20px
+
+.logo
+  width: 44px
+.search
+  margin-left: 40px
+  cursor: pointer
+.user, .basket
+  display: none
+.menu
+  cursor: pointer
+
+@media screen and (min-width: 376px) and (max-width: 768px)
+  .user
+    display: block
+  
+@media screen and (min-width: 768px)
+  .wrapper
+    padding-left: 230px
+    padding-right: 230px
+  .user, .basket
+    display: block
+    cursor: pointer
