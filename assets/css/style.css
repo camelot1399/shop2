@@ -34,6 +34,10 @@ p {
   color: #5D5D5D;
 }
 
+.colorSpec {
+  color: #F16D7F;
+}
+
 .wrapper {
   padding-left: 16px;
   padding-right: 16px;
@@ -104,6 +108,52 @@ p {
 
 .menu {
   cursor: pointer;
+}
+
+.basket {
+  position: relative;
+}
+.basket__count {
+  background: #F16D7F;
+  color: #E8E8E8;
+  width: 19px;
+  height: 19px;
+  border-radius: 19px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.brand__left {
+  background: rgba(113, 103, 105, 0.08);
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+.brand__left img {
+  width: 100%;
+}
+.brand__right {
+  background: #F1E4E6;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.brand__right_text {
+  margin-left: 40px;
+  border-left: 12px solid #F16D7F;
+  padding-left: 10px;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 376px) and (max-width: 768px) {
