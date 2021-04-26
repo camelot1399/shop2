@@ -9,11 +9,13 @@ $bg2: rgba(113, 103, 105, 0.08)
 $bg3: #222222 //black
 $bg4: #F8F8F8 // gray
 $bg5: #F16D7F // pink
+$bg6: #222224 //black
 
 $color1: #F16D7F //pink
 $color2: #5D5D5D //gray
 $color3: #000000 //black
 $color7: #E8E8E8 //gray
+$color8: #FBFBFB //gray
 
 //btn
 $color4: #FF6A6A //btn co
@@ -212,7 +214,29 @@ p
       padding: 12px
       cursor: pointer
       
-  
+.worldwide
+  background: $bg6
+  &__items
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin: 40px 0
+    &_icon
+      color: $color1
+      font-size: 43px
+    &_h3
+      margin-top: 28px
+      color: $color8
+    &_p
+      margin-top: 15px
+      color: $color8
+      text-align: center
 
 @media screen and (min-width: 768px)
   .user
@@ -281,7 +305,6 @@ p
         margin-top: 20px
       &_item:not(:first-child)
         margin-left: 10px
-        
     &__block2
       display: flex
       flex: 1
@@ -302,3 +325,6 @@ p
       display: flex
       flex-direction: column
       flex: 0 0 32.333333%
+  .worldwide
+    &__items
+      flex-direction: row
