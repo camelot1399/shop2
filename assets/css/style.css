@@ -28,6 +28,10 @@ h3 {
   line-height: 16px;
 }
 
+button {
+  cursor: pointer;
+}
+
 p {
   font-weight: 300;
   font-size: 14px;
@@ -84,6 +88,10 @@ p {
 }
 
 .header {
+  position: relative;
+}
+
+.nav__bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -94,16 +102,90 @@ p {
   font-size: 27px;
   background: #000000;
 }
-.header__left {
+.nav__bar_left {
   display: flex;
   align-items: center;
 }
-.header__right {
+.nav__bar_right {
   display: flex;
   align-items: center;
 }
-.header__right > div:not(:first-child) {
+.nav__bar_right > div:not(:first-child) {
   margin-left: 20px;
+}
+
+#menuBtn {
+  top: 99999;
+  left: 999999;
+  opacity: 0;
+  cursor: pointer;
+}
+#menuBtn:checked ~ .menuBox {
+  display: flex;
+}
+
+.menuBox {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+}
+
+.menu {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 37px 0 0 34px;
+  background: white;
+}
+.menu__backGr {
+  display: none;
+  flex: 4;
+  background: rgba(0, 0, 0, 0.5);
+}
+.menu__header {
+  position: relative;
+}
+.menu__header_label {
+  color: #000000;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+.menu__body_label {
+  color: #F16D7F;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 24px;
+}
+.menu__button {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 22px;
+}
+.menu__ul {
+  margin-left: 20px;
+  padding-left: 0;
+}
+.menu__li {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  list-style-type: none;
+  margin-top: 11px;
+}
+.menu__a {
+  color: #6F6E6E;
+  text-decoration: none;
 }
 
 .logo {
@@ -423,6 +505,10 @@ p {
   .subscribe {
     background-position: 21%, 50%;
   }
+
+  .menu__backGr {
+    display: flex;
+  }
 }
 @media (min-width: 1140px) {
   .wrapper {
@@ -494,5 +580,13 @@ p {
     justify-content: space-between;
     align-items: center;
     background-position: 26%, 50%;
+  }
+
+  .menu {
+    max-width: 230px;
+    box-sizing: border-box;
+  }
+  .menu__backGr {
+    display: flex;
   }
 }/*# sourceMappingURL=style.css.map */
