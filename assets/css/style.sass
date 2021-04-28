@@ -21,6 +21,7 @@ $color8: #FBFBFB //gray
 $color4: #FF6A6A //btn co
 $color5: #F26376 // btn color
 $color6: #fff
+$color9: #E1E1E1 //gray
 
 body
   font-family: Lato
@@ -45,6 +46,7 @@ p
   font-size: 14px
   line-height: 17px
   color: $color2
+  margin-top: 14px
 .colorSpec
   color: $color1
 .wrapper
@@ -238,6 +240,69 @@ p
       color: $color8
       text-align: center
 
+.subscribe
+  background-image: url('../img/subscribe/photo subscribe_max.png')
+  background-size: cover
+  background-position: 21%, 50%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  padding-top: 55px
+  padding-bottom: 100px
+  &__block1
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &__p
+    color: #222224
+  &__block2
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    margin-top: 60px
+  &__form
+    margin-top: 20px
+    height: 50px
+    display: flex
+  &__input
+    background: #E1E1E1
+    color: #222224
+    border: none
+    padding: 7px 20px
+    border-radius: 20px 0 0 20px
+    &:focus
+      outline: 0
+  &__submit
+    border: none
+    background: #F16D7F
+    color: white
+    font-size: 14px
+    border-radius: 0 20px 20px 0
+    &:focus
+      outline: 0
+.footer
+  background: $bg3
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: #FBFBFB
+  padding-top: 40px
+  padding-bottom: 10px
+  &__socialIcon
+    width: 30px
+    height: 30px
+    padding: 10px
+    background: white
+    color: black
+    transition: all .5s
+  &__socialIcon:hover
+    background: $bg5
+    color: white
+  &__text
+    margin-top: 40px 
 @media screen and (min-width: 768px)
   .user
     display: block
@@ -279,7 +344,8 @@ p
       display: flex
       flex-direction: column
       flex: 0 0 49%
-
+  .subscribe
+    background-position: 21%, 50%
 @media (min-width: 1140px) 
   .wrapper
     padding-left: 230px
@@ -328,3 +394,8 @@ p
   .worldwide
     &__items
       flex-direction: row
+  .subscribe
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    background-position: 26%, 50%
