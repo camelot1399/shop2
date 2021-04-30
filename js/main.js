@@ -21,23 +21,25 @@ let menu = {
         let menuBox = document.querySelector('.menuBox');
         let attr = menuBox.getAttribute('view');
         let menu = document.querySelector('.menu');
-
+        let bodyWidth = document.querySelector('body').offsetWidth;
+        
         if (attr === 'close') {
+
             menuBox.setAttribute('view', 'show');
 
-            setTimeout(() => {
-                menu.style.left = '0px';
+            setTimeout( function() {
+                menu.style.left = 0 + 'px';
             }, 100);
             
         } else {
             
-            setTimeout(() => {
-                menu.style.left = '300px';
+            setTimeout( function() {
+                menu.style.left = 230 + 'px';
             }, 100);
 
             setTimeout(() => {
                 menuBox.setAttribute('view', 'close');
-            }, 400);
+            }, 600);
  
         }
     }
