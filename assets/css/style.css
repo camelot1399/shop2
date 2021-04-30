@@ -28,6 +28,15 @@ h3 {
   line-height: 16px;
 }
 
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+ul li {
+  list-style-type: none;
+}
+
 button {
   cursor: pointer;
 }
@@ -120,17 +129,25 @@ p {
   opacity: 0;
   cursor: pointer;
 }
-#menuBtn:checked ~ .menuBox {
-  display: flex;
-}
 
 .menuBox {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
   height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.menuBox[view=close] {
+  display: none;
+}
+.menuBox[view=show] {
+  display: flex;
+}
+.menuBox[view=close] .menu {
+  left: 300px;
 }
 
 .menu {
@@ -138,12 +155,14 @@ p {
   flex: 1;
   flex-direction: column;
   padding: 37px 0 0 34px;
+  cursor: pointer;
+  position: relative;
+  transition: left 0.6s;
+  left: 300px;
   background: white;
 }
 .menu__backGr {
-  display: none;
   flex: 4;
-  background: rgba(0, 0, 0, 0.5);
 }
 .menu__header {
   position: relative;
@@ -186,6 +205,10 @@ p {
 .menu__a {
   color: #6F6E6E;
   text-decoration: none;
+  transition: color 0.5s;
+}
+.menu__a:hover {
+  color: red;
 }
 
 .logo {
@@ -199,10 +222,6 @@ p {
 
 .user, .basket {
   display: none;
-}
-
-.menu {
-  cursor: pointer;
 }
 
 .basket {
@@ -446,6 +465,55 @@ p {
   margin-top: 40px;
 }
 
+.breadcrumb {
+  background: #F8F3F4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 45px;
+}
+.breadcrumb__h1 {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+.breadcrumb__h1_a {
+  color: #F16D7F;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
+.breadcrumbNav {
+  margin-top: 32px;
+}
+.breadcrumbNav__ul {
+  display: flex;
+}
+.breadcrumbNav__a {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #E1E1E1;
+}
+.breadcrumbNav__a::after {
+  content: " / ";
+}
+.breadcrumbNav__a_active {
+  color: #F16D7F;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+.breadcrumbNav__a_active::before {
+  content: " ";
+}
+
 @media screen and (min-width: 768px) {
   .user {
     display: block;
@@ -583,7 +651,7 @@ p {
   }
 
   .menu {
-    max-width: 230px;
+    width: 230px;
     box-sizing: border-box;
   }
   .menu__backGr {
